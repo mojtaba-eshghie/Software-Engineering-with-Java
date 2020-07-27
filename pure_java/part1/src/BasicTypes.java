@@ -79,5 +79,52 @@ public class BasicTypes {
 
 
 
+
+
+        // float and double
+        // float: single precision number (occupies 4 Bytes or 32 bits)
+        // double: double precision number (64 bits)
+        System.out.println(Float.MIN_VALUE);
+        System.out.println(Float.MAX_VALUE);
+
+        // int myIntValue = 5.0; // not accepted
+        float aFloatValue = 5; // accepted
+        double aDoubleValue = 5; // accepted
+
+        // the following is unacceptable since the default floating point value
+        // is assumed to be the double (which is bigger than float and cannot be
+        // easily cast into a float like this:
+        // float otherFloatValue = 5.2;
+
+        // best practice:
+        float newFloatValue = 5.2f;
+        double newDoubleValue = 5.2d;
+
+
+        // challenge: how to fix the abovementioned error without using 'f' or 'd' prefixes?
+        float someFloat = (float) 5.2; //5.2 is a double cast into float!
+
+
+        // int, float, and double behavior:
+        int a = 1;
+        float b = 1f;
+        double c = 1d;
+        System.out.println(a/3);
+        System.out.println(b/3);
+        System.out.println(c/3);
+        System.out.println(c/3.0);
+        System.out.println(c/3.00);
+        System.out.println(c/3d);
+        System.out.println(c/3f);
+
+
+
+
+
+        /*
+        Using float and double for very precise floating point operations is not
+        a good choice, for that, there is a class BigDecimal. 
+         */
+
     }
 }
