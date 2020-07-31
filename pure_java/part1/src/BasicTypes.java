@@ -118,13 +118,31 @@ public class BasicTypes {
         System.out.println(c/3f);
 
 
-
-
-
         /*
         Using float and double for very precise floating point operations is not
         a good choice, for that, there is a class BigDecimal. 
          */
 
+
+
+        // char and boolean
+        //chars are 16 byte in Java to allow for unicode characters to be stored
+        char myChar = 'd';
+        char myUnicodeChar = '\u0044';
+        char myCopyrightchar = '\u00A9';
+        System.out.println(myUnicodeChar);
+        System.out.println(myCopyrightchar);
+
+        String mySentence = "\u00A9 2020";
+        System.out.println(mySentence);
+
+
+
+        // Strings are immutable!
+        /*
+        Therefore, appending operations are inefficient in that they should
+        create multiple versions of themselves in the middle of the operation,
+        The best way to do this is to use "StringBuffers"
+         */
     }
 }
