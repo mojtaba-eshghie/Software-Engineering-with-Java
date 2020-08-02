@@ -144,5 +144,22 @@ public class BasicTypes {
         create multiple versions of themselves in the middle of the operation,
         The best way to do this is to use "StringBuffers"
          */
+
+
+
+        // Expressions vs Statements
+        int myInt = 40; // 'myInt = 40' is an expression, however, the entire line would be an statement
+        myInt++; // also a complete statement
+        System.out.println("this is a complete statement"); // also a complete statement
+
+        // statements don't have to be in one line
+        System.out.println("This is " +
+                "another " +
+                "Statement");
+
+        // two statements in the same line:
+        int newVar; newVar = 20;
+
+
     }
 }
